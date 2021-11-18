@@ -40,5 +40,28 @@ public function store(Request $request)
 	return redirect('/pegawai'); //tidak return view karena tidak fleksibel
 
 }
-    
+    // method untuk edit data pegawai
+public function edit($id)
+{
+	// mengambil data pegawai berdasarkan id yang dipilih
+	$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+	// passing data pegawai yang didapat ke view edit.blade.php
+	return view('pegawai.edit',['pegawai' => $pegawai]);
+
+}
+
+// update data pegawai
+public function update(Request $request)
+{
+	// update data pegawai
+	DB::table('pegawai')->where('pegawai_id',$request->id)->update([
+		'pegawai_nama' => $request->nama,
+		'pegawai_jabatan' => $request->jabatan,
+		'pegawai_umur' => $request->umur,
+		'pegawai_alamat' => $request->alamat
+	]);
+	// alihkan halaman ke halaman pegawai
+	return redirect('/pegawai');
+}
+
 }
