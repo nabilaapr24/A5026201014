@@ -30,3 +30,9 @@ Route::get('hitungphp', "viewController@resultphp");
 
 Route::get('isiannama',"viewController@showForm");
 Route::post('greetings', "viewController@resultGreetings");
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
