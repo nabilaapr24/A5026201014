@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Data Mutasi Pegawai PT Pweb A</title>
-</head>
-<body>
+@extends('layout.bahagia')
+@section('title', 'Mengubah Data Mutasi')
+@section('judulhalaman', 'Edit Data Mutasi')
 
-	<h2><a href="https://my.its.ac.id">MyITS</a></h2>
-	<h3>Edit Data Mutasi</h3>
-
+@section('konten')
 	<a href="/mutasi"> Kembali</a>
 	
 	<br/>
@@ -25,6 +20,4 @@
 	</form>
 	@endforeach
 		
-
-</body>
-</html>
+@endsection

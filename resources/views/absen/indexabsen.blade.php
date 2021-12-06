@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CRUD Tabel Absen</title>
-</head>
-<body>
+@extends('layout.bahagia')
+@section('title', 'Data Absensi Pegawai')
+@section('judulhalaman', 'Daftar Absensi Pegawai')
 
-	<h2>Daftar Absensi Pegawai</h2>
-
-
+@section('konten')
 	<a href="/absen/add"> + Tambah Absensi</a>
 
 	<br/>
@@ -42,5 +37,4 @@
         A : Alpha <br>
         </p>
 
-</body>
-</html>
+@endsection

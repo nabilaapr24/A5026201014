@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Data Mutasi Karyawan PT Pweb A</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2>Nabila Aprilia</h2>
-	<h3>Data Mutasi Karyawan PT Pweb A</h3>
+@section('title', 'Tabel Data Mutasi')
+@section('judulhalaman', 'Data Mutasi Karyawan PT PWeb A')
 
+@section('konten')
 	<a href="/mutasi/tambah"> + Tambah Data Mutasi</a>
 	
 	<br/>
@@ -36,6 +32,4 @@
 		@endforeach
 	</table>
 
-
-</body>
-</html>
+@endsection

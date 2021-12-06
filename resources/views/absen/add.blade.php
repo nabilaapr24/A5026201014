@@ -35,6 +35,8 @@
         </script>
 
         Status <br />
+        <input type="radio" id="html" name="status" value="H">
+        <label for="html">Hadir</label><br>
         <input type="radio" id="html" name="status" value="I">
         <label for="html">Izin</label><br>
         <input type="radio" id="css" name="status" value="S" checked="checked">

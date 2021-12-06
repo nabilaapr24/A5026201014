@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tambah Data Mutasi</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2><a href="my.its.ac.id">MyITS</a></h2>
-	<h3>Data Pegawai</h3>
+	@section('title', 'Menambah Data Mutasi')
+	@section('judulhalaman', 'Tambah Data Mutasi')
 
+	@section('konten')
 	<a href="/mutasi"> Kembali</a>
 	
 	<br/>
@@ -21,6 +17,4 @@
 		Mulai Bertugas <input type="datetime-local" name="mulaibertugas" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
-
-</body>
-</html>
+	@endsection

@@ -38,6 +38,8 @@
                 </script>
 
                 Status <br />
+                <input type="radio" id="html" name="status" value="H" @if ($a->Status === "H" ) checked="checked" @endif>
+                <label for="html">Hadir</label><br>
                 <input type="radio" id="html" name="status" value="I" @if ($a->Status === "I" ) checked="checked" @endif>
                 <label for="html">Izin</label><br>
                 <input type="radio" id="css" name="status" value="S"  @if ($a->Status === "S" ) checked="checked" @endif>
