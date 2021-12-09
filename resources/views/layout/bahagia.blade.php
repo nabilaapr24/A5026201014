@@ -43,10 +43,7 @@
     <div id="main">
 
     <div class="w3-blue">
-        <button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
-        <div class="w3-container subjudul">
-            <h3>Data Pegawai PT Pweb A</h3>
-        </div>
+        <p><button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button><b>Data Pegawai PT PWEB A</b></p>
     </div>
 
     <div class="container mt-2">
@@ -57,8 +54,10 @@
 
     <div class="isi">
         <h3>@yield('judulhalaman')</h3>
+        <card>
         @section('konten')
         @show
+        </card>
     </div>
     
     <div class="padding-footer bg-gray font-alt container-fluid">

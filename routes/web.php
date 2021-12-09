@@ -31,7 +31,7 @@ Route::get('hitungphp', "viewController@resultphp");
 Route::get('isiannama',"viewController@showForm");
 Route::post('greetings', "viewController@resultGreetings");
 
-//route CRUD
+//route CRUD pegawai
 Route::get('/pegawai','PegawaiController@index');
 
 Route::get('/pegawai/tambah','PegawaiController@tambah');
@@ -39,11 +39,15 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/view/{id}','PegawaiController@detail');
+
+//route cari pegawai
+Route::get('/pegawai/cari','PegawaiController@cari');
 
 //route CRUD
 Route::get('/mutasi','MutasiController@index');
 
-//route CRUD
+//route CRUD mutasi
 Route::get('/mutasi/tambah','MutasiController@tambah');
 Route::post('/mutasi/store','MutasiController@store');
 Route::get('/mutasi/edit/{id}','MutasiController@edit');
@@ -57,3 +61,13 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+//route CRUD laptop
+Route::get('/laptop','LaptopController@indexlaptop');
+
+Route::get('/laptop/tambah','LaptopController@tambah');
+Route::post('/laptop/store','LaptopController@store');
+Route::get('/laptop/edit/{id}','LaptopController@edit');
+Route::post('/laptop/update','LaptopController@update');
+Route::get('/laptop/hapus/{id}','LaptopController@hapus');
+Route::get('/laptop/view/{id}','LaptopController@detail');

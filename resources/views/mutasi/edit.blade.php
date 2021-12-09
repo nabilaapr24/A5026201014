@@ -12,11 +12,31 @@
 	<form action="/mutasi/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $m->ID }}"> <br/>
-		ID Pegawai <input type="number" required="required" name="idpegawai" value="{{ $m->IDPegawai }}"> <br/>
-		Departemen <input type="text" required="required" name="dept" value="{{ $m->Departemen }}",  pattern="{,30}"> <br/>
-		SubDepartemen <input type="text" required="required" name="subdept" value="{{ $m->SubDepartemen }}",  pattern="{,20}"> <br/>
-        Mulai Bertugas <input type="datetime" name="mulaibertugas" required="required" value="{{ $m->MulaiBertugas}}"> <br/>
-		<input type="submit" value="Simpan Data">
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Nama Pegawai</label>
+            <select name="idpegawai" >
+                @foreach($pegawai as $p)
+                <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+                @endforeach
+            </select>
+        </div>
+        <br>
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Departemen</label>
+            <input type="text" required="required" name="dept" value="{{ $m->Departemen }}",  pattern="{,30}">
+        </div>
+		<br>
+		<div class="form-group">
+            <label class="col-sm-2 label-control">SubDepartemen</label>
+            <input type="text" required="required" name="subdept" value="{{ $m->SubDepartemen }}",  pattern="{,20}">
+        </div>
+		<br>
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Mulai Bertugas</label>
+            <input type="datetime-local" name="mulaibertugas" required="required" value="{{ $m->SubDepartemen }}">
+        </div>
+		<br>
+		<input class="btn-primary" type="submit" value="Simpan Data">
 	</form>
 	@endforeach
 		

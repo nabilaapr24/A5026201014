@@ -12,8 +12,9 @@ class PegawaiController extends Controller
     {
     	//DB::table('')->get();
         // mengambil data dari table pegawai
-    	$pegawai = DB::table('pegawai')->get(); //hasil get adalah array of object
+    	//$pegawai = DB::table('pegawai')->get(); //hasil get adalah array of object
 
+		$pegawai = DB::table('pegawai')->paginate(10); //membuat paginate di halaman
     	// mengirim data pegawai ke view index
     	return view('pegawai.index',['pegawai' => $pegawai]); //teknik komunikasi passing value antara controller dan view
 
@@ -50,6 +51,16 @@ public function edit($id)
 
 }
 
+   // method untuk view data pegawai
+   public function detail($id)
+   {
+	   // mengambil data pegawai berdasarkan id yang dipilih
+	   $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+	   // passing data pegawai yang didapat ke view detail.blade.php
+	   return view('pegawai.detail',['pegawai' => $pegawai]);
+   
+   }
+
 // update data pegawai
 public function update(Request $request)
 {
@@ -73,5 +84,22 @@ public function hapus($id)
 	// alihkan halaman ke halaman pegawai
 	return redirect('/pegawai');
 }
+
+//method untuk cari data pegawai
+public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$pegawai = DB::table('pegawai')
+		->where('pegawai_nama','like',"%".$cari."%")
+		-> orwhere('pegawai_alamat','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('pegawai.index',['pegawai' => $pegawai]);
+ 
+	}
 
 }

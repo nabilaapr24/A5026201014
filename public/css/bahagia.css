@@ -57,5 +57,6 @@ a:active{
 }
 .isi{
     font-family: 'Poppins', sans-serif;
-    margin: 1rem;
+    margin-left:10%;
+    margin-right:10%
 }

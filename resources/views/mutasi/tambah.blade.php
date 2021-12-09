@@ -11,10 +11,30 @@
 
 	<form action="/mutasi/store" method="post">
 		{{ csrf_field() }}
-		ID Pegawai <input type="number" name="idpegawai" required="required"> <br/>
-		Departemen <input type="text" name="dept" required="required", pattern="{,30}"> <br/>
-		Sub Departemen <input type="text" name="subdept" required="required", pattern="{,20}"> <br/>
-		Mulai Bertugas <input type="datetime-local" name="mulaibertugas" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Nama Pegawai</label>
+            <select name="idpegawai" >
+                @foreach($pegawai as $p)
+                <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+                @endforeach
+            </select>
+        </div>
+        <br>
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Departemen</label>
+            <input type="text" name="dept" required="required", pattern="{,30}">
+        </div>
+		<br>
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Sub Departemen</label>
+            <input type="text" name="subdept" required="required", pattern="{,20}">
+        </div>
+		<br>
+		<div class="form-group">
+            <label class="col-sm-2 label-control">Mulai Bertugas</label>
+            <input type="datetime-local" name="mulaibertugas" required="required">
+        </div>
+		<br>
+		<input class="btn-primary" type="submit" value="Simpan Data">
 	</form>
 	@endsection
