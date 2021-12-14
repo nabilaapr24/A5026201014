@@ -36,8 +36,7 @@
         <a href="/pegawai" class="w3-bar-item w3-button">Pegawai</a>
         <a href="/absen" class="w3-bar-item w3-button">Absen</a>
         <a href="/mutasi" class="w3-bar-item w3-button">Mutasi</a>
-        <a href="#" class="w3-bar-item w3-button">Minggu Depan</a>
-        <a href="#" class="w3-bar-item w3-button">Praktikum</a>
+        <a href="/laptop" class="w3-bar-item w3-button">Laptop</a>
     </div>
 
     <div id="main">

@@ -9,8 +9,8 @@
     </br>
 
     <div class="container" align="center">
-	<form action="/pegawai/cari" method="GET">
-		<input type="text" class="form-control" name="cari" placeholder="Cari Pegawai berdasarkan merk laptop" value="{{ old('cari') }}">
+	<form action="/laptop/cari" method="GET">
+		<input type="text" class="form-control" name="cari" placeholder="Cari Laptop berdasarkan merk" value="{{ old('cari') }}">
 		<input type="submit" class="btn btn-default" value="CARI">
 	</form>
 	</div>
@@ -37,6 +37,6 @@
 		</tr>
 		@endforeach
 	</table>
-    {{ $pegawai->links() }}
+    {{ $laptop->links() }}
 
 @endsection

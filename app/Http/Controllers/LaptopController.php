@@ -11,7 +11,7 @@ class LaptopController extends Controller
     public function indexlaptop()
     {
     	// mengambil data dari table 
-        $laptop = DB::table('laptop')->paginate(1); //membuat paginate di halaman
+        $laptop = DB::table('laptop')->paginate(); //membuat paginate di halaman
 
     	// mengirim data ke view index
     	return view('laptop.indexlaptop',['laptop' => $laptop]);
@@ -27,10 +27,10 @@ public function tambah()
 
 }
 
-    // method untuk insert data ke table pegawai
+    // method untuk insert data ke table 
     public function store(Request $request)
     {
-        // insert data ke table pegawai
+        // insert data ke table 
         DB::table('laptop')->insert([
             'merklaptop' => $request->merk,
             'stocklaptop' => $request->stock,

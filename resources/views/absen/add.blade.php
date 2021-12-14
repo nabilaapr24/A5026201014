@@ -44,7 +44,7 @@
         <label for="izin">Izin</label>
         <input type="radio" id="sakit" name="status" value="S" checked="checked">
         <label for="sakit">Sakit</label>
-        <input type="alpha" id="javascript" name="status" value="A">
+        <input type="radio" id="alpha" name="status" value="A">
         <label for="alpha">Alpha</label>
         </div>
         

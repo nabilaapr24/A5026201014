@@ -71,3 +71,5 @@ Route::get('/laptop/edit/{id}','LaptopController@edit');
 Route::post('/laptop/update','LaptopController@update');
 Route::get('/laptop/hapus/{id}','LaptopController@hapus');
 Route::get('/laptop/view/{id}','LaptopController@detail');
+
+Route::get('/laptop/cari','LaptopController@cari');
