@@ -18,9 +18,9 @@
 			<td>{{ $b->KodeBarang}}</td>
             <td>{{ $b->Jumlah}}</td>
             <td>
-                {{ $b->Harga}}
+                {{ number_format($b->Harga)}}
             </td>
-            <td>{{ $b->Jumlah * $b->Harga}}</td>
+            <td>{{ number_format($b->Jumlah * $b->Harga)}}</td>
 			<td>
                 <a href="/belanja/tambah/">Beli</a>
 				|
