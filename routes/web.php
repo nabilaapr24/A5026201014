@@ -73,3 +73,13 @@ Route::get('/laptop/hapus/{id}','LaptopController@hapus');
 Route::get('/laptop/view/{id}','LaptopController@detail');
 
 Route::get('/laptop/cari','LaptopController@cari');
+
+//CRUD untuk halaman keranjang belanja
+Route::get('/belanja','BelanjaController@indexbelanja');
+
+Route::get('/belanja/tambah','BelanjaController@tambah');
+Route::post('/belanja/store','BelanjaController@store');
+Route::get('/belanja/edit/{id}','BelanjaController@edit');
+Route::post('/belanja/update','BelanjaController@update');
+Route::get('/belanja/hapus/{id}','BelanjaController@hapus');
+Route::get('/belanja/view/{id}','BelanjaController@detail');
